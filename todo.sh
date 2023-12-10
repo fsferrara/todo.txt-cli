@@ -918,7 +918,7 @@ _format()
     fi
     items=$(
         if [ "$FILE" ]; then
-            sed '1,/^---$/d; /^$/d' "$FILE" | sed =
+            sed '1,/^---$/d; /^$/d; /^#/d' "$FILE" | sed =
         else
             sed =
         fi                                                      \
